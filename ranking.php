@@ -48,10 +48,11 @@
       $ligne = mysqli_fetch_array($exec_requete);
       $pseudo = $ligne["pseudo"];
       $nat = $ligne["natio"];
+      $iduser = $ligne["id"];
     echo"<tr>
     <td data-title='rang'>".$pseudo."</td>
     <td data-title='Nationalité'>".$nat."</td>
-    <td data-title='Valeur'>$</td>
+    <td data-title='Valeur'>".$iduser."</td>
     <td data-title='QBTC'>Q</td>
     <td data-title='QETH'>Q</td>
     <td data-title='QBNB'>Q</td>
