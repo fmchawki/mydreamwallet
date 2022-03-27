@@ -9,8 +9,12 @@
 <body>
     <?php include("menu.php"); ?>
 
-
-    <div class="container">
+  <div class="titre">
+      <h1>Classement Mondial - MDW</h1>
+      <p>Vous n'avez pas encore de portefeuille ? Inscrivez-vous !</p>
+      <button class="button-9" role="button" href="login.php" onclick="self.location.href='login.php'">S'inscrire !</button>
+  </div>
+  <div class="container">
   <table class="responsive-table">
     <thead>
       <tr>
