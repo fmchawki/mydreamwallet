@@ -7,12 +7,30 @@
 
 </head>
 <body>
-    <?php include("menu.php"); ?>
+    <?php include("menu.php"); 
+
+    $valeur  = "Vous n'avez pas encore de portefeuille ? Inscrivez-vous !";
+    $nu="";
+    if (isset ($_SESSION['pseudo'])){
+        $nu = $_SESSION['pseudo'];
+        $ni = $_SESSION['mailA'];
+        $na = $_SESSION['natio'];
+        $valeurconnect = "Devient le meilleur investisseur du monde $nu !";
+    }
+
+    if ($nu == null) {
+    $output1 = $valeur;
+    } else {
+    $output1 = $valeurconnect;
+    }
+    ?>
 
   <div class="titre">
       <h1>Classement Mondial - MDW</h1>
-      <p>Vous n'avez pas encore de portefeuille ? Inscrivez-vous !</p>
+      <p><?php echo $output1; ?></p>
+      <?php if (isset($ni)) { ?>
       <button class="button-9" role="button" href="login.php" onclick="self.location.href='login.php'">S'inscrire !</button>
+      <?php } ?>
   </div>
   <div class="container">
   <table class="responsive-table">
