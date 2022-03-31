@@ -64,9 +64,8 @@
            or die('could not connect to database');
     $requete = "SELECT * FROM User ORDER BY id; ";
     $exec_requete = mysqli_query($db,$requete);
-    $reponse      = mysqli_fetch_array($exec_requete);
     $count = mysqli_num_rows($exec_requete);
-    for ($j = 0; $j < $count-1; $j++) {
+    for ($j = 0; $j < $count; $j++) {
       $ligne = mysqli_fetch_array($exec_requete);
       $pseudo = $ligne["pseudo"];
       $nat = $ligne["natio"];

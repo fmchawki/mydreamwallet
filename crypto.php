@@ -7,7 +7,6 @@
     <?php include("menu.php"); ?>
 </head>
 <body>
-
 <!-- input tag -->
 <input id="searchbar" onkeyup="search_crypto()" type="text"
         name="search" placeholder="Trouver une crypto..">
@@ -28,6 +27,13 @@
       
     <!-- linking javascript -->
     <script src="js/search.js"></script>
+
+    <?php
+    if (isset($_POST["btn-red"])){
+      $valid = $_GET['stock-price-btc'];
+      echo $valid;
+    }
+    ?>
 
 <div class="container">
   <table class="responsive-table">
@@ -50,7 +56,10 @@
         <td data-title="Worldwide Gross" data-type="currency">//</td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-btc">BTC</td>
         <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="Budget" data-type="currency">
+                <form action="crypto.php" method="POST"> 
+                  <button name="btn-red" type="submit" value="Sell">
+                </form></td>
       </tr>
       <tr>
         <th scope="row">ETHEREUM</th>
