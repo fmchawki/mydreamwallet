@@ -251,3 +251,7 @@
   position:relative;
   cursor:  pointer;
 }
+
+.titre{
+	text-align: center;
+  }

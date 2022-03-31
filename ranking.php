@@ -28,7 +28,7 @@
   <div class="titre">
       <h1>Classement Mondial - MDW</h1>
       <p><?php echo $output1; ?></p>
-      <?php if (isset($ni)) { ?>
+      <?php if (!isset($ni)) { ?>
       <button class="button-9" role="button" href="login.php" onclick="self.location.href='login.php'">S'inscrire !</button>
       <?php } ?>
   </div>
