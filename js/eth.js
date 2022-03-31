@@ -99,3 +99,4 @@ ws10.onmessage= (event) => {
     stockPriceElement10.style.color = !lastPrice || lastPrice === price ? 'green' : price >= lastPrice ? 'green' : 'red';
     lastPrice = price;
 };
+
