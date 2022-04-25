@@ -7,6 +7,54 @@
     <?php include("menu.php"); ?>
 </head>
 <body>
+
+<?php 
+
+$valeur  = "new_utilisateur";
+$valeur2 = "mail";
+$valeur3 = "nationalité";
+$valeur4 = "id";
+$nu="";
+if (isset ($_SESSION['pseudo'])){
+    $npseudo = $_SESSION['pseudo'];
+    $nmail = $_SESSION['mailA'];
+    $nnatio = $_SESSION['natio'];
+    $nid = $_SESSION['id'];
+}
+
+if ($nu == null) {
+$output1 = $valeur;
+$output2 = $valeur2;
+$output3 = $valeur3;
+$output4 = $valeur4;
+} else {
+$output1 = $npseudo;
+$output2 = $nmail;
+$output3 = $nnatio;
+$output4 = $nid;
+}
+
+
+
+$db_username = '254480';
+$db_password = 'Thomas&PierreMDW*';
+$db_name     = 'mydreamwallet_base';
+$db_host     = 'mysql-mydreamwallet.alwaysdata.net';
+$db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
+    or die('could not connect to database');
+$requete = "SELECT * FROM User WHERE id='".$output4."'; ";
+$exec_requete = mysqli_query($db,$requete);
+$count = mysqli_num_rows($exec_requete);
+for ($j = 0; $j < $count; $j++) {
+  $ligne = mysqli_fetch_array($exec_requete);
+  $pseudo = $ligne["pseudo"];
+  $nat = $ligne["natio"];
+  $iduser = $ligne["id"];
+}
+
+
+?>
+
 <!-- input tag -->
 <input id="searchbar" onkeyup="search_crypto()" type="text"
         name="search" placeholder="Trouver une crypto..">

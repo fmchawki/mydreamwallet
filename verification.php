@@ -25,14 +25,17 @@ if(isset($_POST['mailA']) && isset($_POST['passw']))
         for ($j = 0; $j < $count; $j++) {
          $pseudo = $reponse["pseudo"];
          $nat = $reponse["natio"];
+         $iduser = $reponse["id"];
          echo $nat;
          echo $pseudo;
+         echo $iduser;
         }
         if($count==1) // nom d'utilisateur et mot de passe correctes
         {
            $_SESSION['mailA'] = $email;
            $_SESSION['pseudo'] = $pseudo;
-           $_SESSION['natio'] = $nat;  
+           $_SESSION['natio'] = $nat;
+           $_SESSION['id'] = $iduser;  
            
           header("Location:home.php");
         }
