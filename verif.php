@@ -51,8 +51,9 @@ validateEmail($adresse);
      
     $requete = "INSERT Into User (User.id,User.pseudo,User.natio,User.pass,User.email,User.verif) VALUES ('".$yep."','".$nom."','".$natio."','".$pass."','".$adresse."','".$verif."');";
     $exec_requete = mysqli_query($db,$requete);
-    
-    //header("location:home.php");
+   
+
+header("location:home.php"):
      
   
 

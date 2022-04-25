@@ -16,6 +16,7 @@ $valeur3 = "nationalité";
 $valeur4 = "id";
 $nu="";
 if (isset ($_SESSION['pseudo'])){
+    $nu = "1";
     $npseudo = $_SESSION['pseudo'];
     $nmail = $_SESSION['mailA'];
     $nnatio = $_SESSION['natio'];
@@ -32,9 +33,6 @@ $output1 = $npseudo;
 $output2 = $nmail;
 $output3 = $nnatio;
 $output4 = $nid;
-}
-
-
 
 $db_username = '254480';
 $db_password = 'Thomas&PierreMDW*';
@@ -42,16 +40,15 @@ $db_name     = 'mydreamwallet_base';
 $db_host     = 'mysql-mydreamwallet.alwaysdata.net';
 $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
     or die('could not connect to database');
-$requete = "SELECT * FROM User WHERE id='".$output4."'; ";
+$requete = "SELECT * FROM mywallet JOIN mywallet.id_user ON User.id WHERE User.id='".$output4."'; ";
 $exec_requete = mysqli_query($db,$requete);
 $count = mysqli_num_rows($exec_requete);
 for ($j = 0; $j < $count; $j++) {
   $ligne = mysqli_fetch_array($exec_requete);
-  $pseudo = $ligne["pseudo"];
-  $nat = $ligne["natio"];
-  $iduser = $ligne["id"];
+  $valeurwallet = $ligne["vwallet"];
+echo $valeurwallet;
 }
-
+}
 
 ?>
 
