@@ -100,14 +100,3 @@ ws10.onmessage= (event) => {
     lastPrice = price;
 };
 
-function getVote(int) {
-    var xmlhttp=new XMLHttpRequest();
-    xmlhttp.onreadystatechange=function() {
-      if (this.readyState==4 && this.status==200) {
-        document.getElementById("askcrypto").innerHTML=this.responseText;
-      }
-    }
-    xmlhttp.open("GET","crypto.php?carotte="+stockPriceElement10,true);
-    console.log(stockPriceElement10)
-    xmlhttp.send();
-  }
