@@ -36,8 +36,9 @@
   <table class="responsive-table">
     <thead>
       <tr>
-        <th scope="col">Ranking Mondial</th>
-        <th scope="col">Nationalité</th></th>
+        <th scope="col">Rank</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Pays</th></th>
         <th scope="col">Valeur Wallet</th>
         <th scope="col">Q BTC</th>
         <th scope="col">Q ETH</th>
@@ -62,7 +63,7 @@
     $db_host     = 'mysql-mydreamwallet.alwaysdata.net';
     $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
            or die('could not connect to database');
-    $requete = "SELECT * FROM User ORDER BY id; ";
+    $requete = "SELECT * FROM mywallet JOIN User ON User.id = mywallet.id_user ORDER BY mywallet.vwallet DESC";
     $exec_requete = mysqli_query($db,$requete);
     $count = mysqli_num_rows($exec_requete);
     for ($j = 0; $j < $count; $j++) {
@@ -70,10 +71,13 @@
       $pseudo = $ligne["pseudo"];
       $nat = $ligne["natio"];
       $iduser = $ligne["id"];
+      $valeurwallet = $ligne["vwallet"];
+      $rank = $j + 1;
     echo"<tr>
-    <td data-title='rang'>".$pseudo."</td>
-    <td data-title='Nationalité'>".$nat."</td>
-    <td data-title='Valeur'>".$iduser."</td>
+    <td data-title='rang'>".$rank."</td>
+    <td data-title='Name'>".$pseudo."</td>
+    <td data-title='Nationalité'><img src='https://flagcdn.com/".$nat.".svg' width='70' height='50'</td>
+    <td data-title='Valeur'>".$valeurwallet."</td>
     <td data-title='QBTC'>Q</td>
     <td data-title='QETH'>Q</td>
     <td data-title='QBNB'>Q</td>

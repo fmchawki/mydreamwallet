@@ -26,8 +26,6 @@
         <li class="cryptobar">LUNA</li>
     </ol>
       
-    <!-- linking javascript -->
-    <script src="js/search.js"></script>
 
 <?php 
 
@@ -92,7 +90,8 @@ for ($j = 0; $j < $count; $j++) {
 }
 
 ?>
-
+<!-- linking javascript -->
+  <script src="js/search.js"></script>
 
 <div class="container">
   <table class="responsive-table">
