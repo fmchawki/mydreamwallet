@@ -5,8 +5,28 @@
     <link rel="icon" type="image/png" href="images/logowalletbtc.png">
     <meta name="Description" content="Data films et series" />
     <?php include("menu.php"); ?>
+    <script>
+  function sendFormulaire(id, type){
+    document.getElementById("cryptocurrencyvalues").value = parseInt(document.getElementById(id).innerHTML);
+
+    document.getElementsByName("type").forEach(function(ele, idx){
+      ele.value = type;
+    });
+
+    document.getElementById("Form").submit()
+    
+
+
+    
+  }
+
+
+// MAINTENANT que ta fonction sendForm() est déclarée, il faut l'exécuter en l'appelant comme ceci
+</script>
+
 </head>
 <body>
+  
 
 <!-- input tag -->
 <input id="searchbar" onkeyup="search_crypto()" type="text"
@@ -89,10 +109,11 @@ for ($j = 0; $j < $count; $j++) {
 }
 }
 
-?>
-<!-- linking javascript -->
-  <script src="js/search.js"></script>
 
+
+
+
+?>
 <div class="container">
   <table class="responsive-table">
     <thead>
@@ -107,6 +128,7 @@ for ($j = 0; $j < $count; $j++) {
       </tr>
     </thead>
     <tbody>
+      <form id="Form" action="transaction.php" method='POST'>
       <tr>
         <th scope="row">CASH</th>
         <td data-title="Released">//</td>
@@ -203,12 +225,19 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qluna; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-lun">LUNA</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="luna" value="Buy" onclick="sendFormulaire('stock-price-lun', 'buy')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="luna" value="Sell" onclick="sendFormulaire('stock-price-lun', 'sell')"> </div></td>
       </tr>
+    </tbody>
+    <input id="cryptocurrencyvalues" type='hidden' name="values" value=None> 
+    <input class="type" type='hidden' name="type" value=None>
+</form>
     </tbody>
   </table>
 </div>
+
+<!-- linking javascript -->
+<script src="js/eth.js"></script>
 
 </body>
 </html>
