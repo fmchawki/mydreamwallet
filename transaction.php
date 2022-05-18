@@ -56,6 +56,7 @@ function console_log($data){
 }
 console_log($_POST['values']);
 console_log($_POST['type']);
+console_log($_POST['name']);
 ?>
 
 

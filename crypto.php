@@ -6,9 +6,9 @@
     <meta name="Description" content="Data films et series" />
     <?php include("menu.php"); ?>
     <script>
-  function sendFormulaire(id, type){
-    document.getElementById("cryptocurrencyvalues").value = parseInt(document.getElementById(id).innerHTML);
-
+  function sendFormulaire(id, type,name){
+    document.getElementById("cryptocurrencyvalues").value = parseFloat(document.getElementById(id).innerHTML);
+    document.getElementById("name").value = name;
     document.getElementsByName("type").forEach(function(ele, idx){
       ele.value = type;
     });
@@ -144,8 +144,8 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qbtc; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-btc">BTC</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="btc" value="Buy" onclick="sendFormulaire('stock-price-btc', 'buy','btc')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="btc" value="Sell" onclick="sendFormulaire('stock-price-btc', 'sell','btc')"></div></td>
       </tr>
       <tr>
         <th scope="row">ETHEREUM</th>
@@ -153,8 +153,8 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qeth; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-eth">ETH</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="eth" value="Buy" onclick="sendFormulaire('stock-price-eth', 'buy','eth')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="eth" value="Sell" onclick="sendFormulaire('stock-price-eth', 'sell','eth')"></div></td>
       </tr>
       <tr>
         <th scope="row">BINANCE COIN</th>
@@ -162,8 +162,8 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qbnb; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-bnbbtc">BNBC</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="bnb" value="Buy" onclick="sendFormulaire('stock-price-bnbbtc', 'buy','bnb')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="avax" value="Sell" onclick="sendFormulaire('stock-price-bnbbtc', 'sell','bnb')"></div></td>
       </tr>
        <tr>
         <th scope="row">SOLANA</th>
@@ -171,8 +171,8 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qsol; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-sol">SOL</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="sol" value="Buy" onclick="sendFormulaire('stock-price-sol', 'buy','sol')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="avax" value="Sell" onclick="sendFormulaire('stock-price-sol', 'sell','sol')"></div></td>
       </tr>
       <tr>
         <th scope="row">CHAIN LINK</th>
@@ -180,8 +180,8 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qlink; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-link">LINK</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="link" value="Buy" onclick="sendFormulaire('stock-price-link', 'buy','link')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="link" value="Sell" onclick="sendFormulaire('stock-price-link', 'sell','link')"></div></td>
       </tr>
       <tr>
         <th scope="row">POLKA DOT</th>
@@ -189,8 +189,8 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qdot; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-dot">DOT</td></td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="dot" value="Buy" onclick="sendFormulaire('stock-price-dot', 'buy','dot')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="dot" value="Sell" onclick="sendFormulaire('stock-price-dot', 'sell','dot')"></div></td>
       </tr>
       <tr>
         <th scope="row">CARDANO</th>
@@ -198,8 +198,8 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qada; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-wbt">ADA</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="ada" value="Buy" onclick="sendFormulaire('stock-price-ada', 'buy','ada')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="ada" value="Sell" onclick="sendFormulaire('stock-price-ada', 'sell','ada')"></div></td>
       </tr>
       <tr>
         <th scope="row">XRP</th>
@@ -207,8 +207,8 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qxrp; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-xrp">XRP</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="xrp" value="Buy" onclick="sendFormulaire('stock-price-xrp', 'buy','xrp')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="xrp" value="Sell" onclick="sendFormulaire('stock-price-xrp', 'sell','xrp')"></div></td>
       </tr>
       <tr>
         <th scope="row">AVAX</th>
@@ -216,8 +216,8 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qavax; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-ava">AVAX</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green">Buy</div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red">Sell</div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="avax" value="Buy" onclick="sendFormulaire('stock-price-ava', 'buy','avax')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="avax" value="Sell" onclick="sendFormulaire('stock-price-ava', 'sell','avax')"></div></td>
       </tr>
       <tr>
         <th scope="row">LUNA</th>
@@ -225,12 +225,13 @@ for ($j = 0; $j < $count; $j++) {
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qluna; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-lun">LUNA</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="luna" value="Buy" onclick="sendFormulaire('stock-price-lun', 'buy')"></div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="luna" value="Sell" onclick="sendFormulaire('stock-price-lun', 'sell')"> </div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="luna" value="Buy" onclick="sendFormulaire('stock-price-lun', 'buy','luna')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="luna" value="Sell" onclick="sendFormulaire('stock-price-lun', 'sell','luna')"></div></td>
       </tr>
     </tbody>
     <input id="cryptocurrencyvalues" type='hidden' name="values" value=None> 
     <input class="type" type='hidden' name="type" value=None>
+    <input class="type" type='hidden' id="name" name="name" value=None>
 </form>
     </tbody>
   </table>
