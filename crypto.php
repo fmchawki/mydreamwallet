@@ -90,7 +90,7 @@ $db_name     = 'mydreamwallet_base';
 $db_host     = 'mysql-mydreamwallet.alwaysdata.net';
 $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
     or die('could not connect to database');
-$requete = "SELECT * FROM mywallet JOIN User ON User.id = mywallet.id_user WHERE User.id='".$output4."'; ";
+$requete = "SELECT * FROM User WHERE User.id='".$output4."'; ";
 $exec_requete = mysqli_query($db,$requete);
 $count = mysqli_num_rows($exec_requete);
 for ($j = 0; $j < $count; $j++) {

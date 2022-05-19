@@ -18,7 +18,7 @@ if(isset($_POST['mailA']) && isset($_POST['passw']))
     if($email !== ""&& $password !== "")
     {
         $requete = "SELECT * FROM User where 
-              email = '".$email."' and pass = '".$password."' ";
+              email = '".$email."'";
         $exec_requete = mysqli_query($db,$requete);
         $reponse      = mysqli_fetch_array($exec_requete);
         $count = mysqli_num_rows($exec_requete);

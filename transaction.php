@@ -71,9 +71,13 @@ if (isset ($_SESSION['pseudo'])){
 }
 
 
-if ($nu == null){
+if ($nu != null){
     header('Location: login.php');
 }
+elseif ($_POST['values']=='NaN'){
+    header('Location: crypto.php');
+}
+
 
 elseif (($_POST['type'] == "sell")){
     $qcrypto = "q_" + $_POST['name'];
