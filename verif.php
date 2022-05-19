@@ -22,11 +22,11 @@ session_start();
      $natio = $_POST['origin'];
      $verif=0;
      
-     $result = mysqli_query($db,"SELECT * FROM User");
+    $result = mysqli_query($db,"SELECT * FROM User");
     $num_rows = mysqli_num_rows($result);
     $yep = 10;
     echo $num_rows;
-    $requete = "INSERT Into User (User.id,User.pseudo,User.natio,User.pass,User.email,User.verif) VALUES (".$yep.",'".$nom."','".$natio."','".$pass."','".$adresse."',".$verif.")";
+    $requete = "INSERT Into User (User.pseudo,User.natio,User.pass,User.email,User.verif,User.vwallet,User.q_btc,User.q_eth,User.q_bnb,User.q_sol,User.q_link,User.q_dot,User.q_ada,User.q_xrp,User.q_avax,User.q_luna) VALUES ('".$nom."','".$natio."','".$pass."','".$adresse."','".$verif."',5000,0,0,0,0,0,0,0,0,0,0)";
     $exec_requete = mysqli_query($db,$requete);
 
     /* *
