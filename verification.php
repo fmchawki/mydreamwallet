@@ -26,12 +26,14 @@ if(isset($_POST['mailA']) && isset($_POST['passw']))
          $pseudo = $reponse["pseudo"];
          $nat = $reponse["natio"];
          $iduser = $reponse["id"];
+         $vwallet = $reponse["v_wallet"];
          echo $nat;
          echo $pseudo;
          echo $iduser;
         }
         if($count==1) // nom d'utilisateur et mot de passe correctes
         {
+           $_SESSION['vwallet'] = $vwallet;
            $_SESSION['mailA'] = $email;
            $_SESSION['pseudo'] = $pseudo;
            $_SESSION['natio'] = $nat;

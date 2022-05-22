@@ -26,28 +26,35 @@
 
 </head>
 <body>
-  
-
-<!-- input tag -->
-<input id="searchbar" onkeyup="search_crypto()" type="text"
-        name="search" placeholder="Trouver une crypto..">
-      
-    <!-- ordered list -->
-    <ol id='list'>
-        <li class="cryptobar">BITCOIN</li>
-        <li class="cryptobar">ETHEREUM</li>
-        <li class="cryptobar">BINANCE COIN</li>
-        <li class="cryptobar">SOLANA</li>
-        <li class="cryptobar">CHAIN LINK</li>
-        <li class="cryptobar">POLSKA DOT</li>
-        <li class="cryptobar">CARDANO</li>
-        <li class="cryptobar">XRP</li>
-        <li class="cryptobar">AVAX</li>
-        <li class="cryptobar">LUNA</li>
-    </ol>
-      
+       
 
 <?php 
+
+$valeur  = "Vous n'avez pas encore de portefeuille ? Inscrivez-vous !";
+    $nu="";
+    if (isset ($_SESSION['pseudo'])){
+        $nu = $_SESSION['pseudo'];
+        $ni = $_SESSION['mailA'];
+        $na = $_SESSION['natio'];
+        $valeurconnect = "Devient le meilleur investisseur du monde $nu !";
+    }
+
+    if ($nu == null) {
+    $output1 = $valeur;
+    } else {
+    $output1 = $valeurconnect;
+    }
+    ?>
+
+  <div class="titre">
+      <h1>Lancez-vous dès maintenant !</h1>
+      <p><?php echo $output1; ?></p>
+      <?php if (!isset($ni)) { ?>
+      <button class="button-9" role="button" href="login.php" onclick="self.location.href='login.php'">S'inscrire !</button>
+      <?php } ?>
+  </div>
+
+<?php
 
 $valeur  = "new_utilisateur";
 $valeur2 = "mail";
@@ -107,6 +114,7 @@ for ($j = 0; $j < $count; $j++) {
   $qavax = $ligne["q_avax"];
   $qluna = $ligne["q_luna"];
 }
+$_SESSION['vwallet'] = $valeurwallet; 
 }
 
 

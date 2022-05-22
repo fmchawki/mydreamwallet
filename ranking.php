@@ -73,21 +73,31 @@
       $iduser = $ligne["id"];
       $valeurwallet = $ligne["vwallet"];
       $rank = $j + 1;
+      $qbtc = $ligne["q_btc"];
+      $qeth = $ligne["q_eth"];
+      $qbnb = $ligne["q_bnb"];
+      $qsol = $ligne["q_sol"];
+      $qlink = $ligne["q_link"];
+      $qdot = $ligne["q_dot"];
+      $qada = $ligne["q_ada"];
+      $qxrp = $ligne["q_xrp"];
+      $qavax = $ligne["q_avax"];
+      $qluna = $ligne["q_luna"];
     echo"<tr>
     <td data-title='rang'>".$rank."</td>
     <td data-title='Name'>".$pseudo."</td>
     <td data-title='Nationalité'><img src='https://flagcdn.com/".$nat.".svg' width='70' height='50'</td>
     <td data-title='Valeur'>".$valeurwallet."</td>
-    <td data-title='QBTC'>Q</td>
-    <td data-title='QETH'>Q</td>
-    <td data-title='QBNB'>Q</td>
-    <td data-title='QSOL'>Q</td>
-    <td data-title='QLINK'>Q</td>
-    <td data-title='QDOT'>Q</td>
-    <td data-title='QADA'>Q</td>
-    <td data-title='QXRP'>Q</td>
-    <td data-title='QAVAX'>Q</td>
-    <td data-title='ALUNA'>Q</td>
+    <td data-title='QBTC'>".$qbtc."</td>
+    <td data-title='QETH'>".$qeth."</td>
+    <td data-title='QBNB'>".$qbnb."</td>
+    <td data-title='QSOL'>".$qsol."</td>
+    <td data-title='QLINK'>".$qlink."</td>
+    <td data-title='QDOT'>".$qdot."</td>
+    <td data-title='QADA'>".$qada."</td>
+    <td data-title='QXRP'>".$qxrp."</td>
+    <td data-title='QAVAX'>".$qavax."</td>
+    <td data-title='ALUNA'>".$qluna."</td>
     </tr>";
     }
 
