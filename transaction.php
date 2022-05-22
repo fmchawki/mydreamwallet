@@ -90,10 +90,9 @@ if ($nu == null) {
         $db_host     = 'mysql-mydreamwallet.alwaysdata.net';
         $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
             or die('could not connect to database');
-        $requete = "UPDATE User SET User.'".$qcrypto."'+= 1 , User.vwallet='".$v_wallet."' WHERE User.id='".$nid."'";
-        echo "salut";
-        header("location:crypto.php")
-
+        $requete = "UPDATE User SET '".$qcrypto."' =+ 1 , vwallet='".$v_wallet."' WHERE id='".$nid."'";
+        $exec_requete = mysqli_query($db,$requete);
+        header("location:crypto.php");
     } else {
         echo "pas assez dargent ! dommage";
     }
