@@ -92,7 +92,7 @@ if ($nu == null) {
             or die('could not connect to database');
         $requete = "UPDATE User SET '".$qcrypto."' =+ 1 , vwallet='".$v_wallet."' WHERE id='".$nid."'";
         $exec_requete = mysqli_query($db,$requete);
-        header("location:crypto.php");
+        echo "salut les amis";
     } else {
         echo "pas assez dargent ! dommage";
     }

@@ -35,7 +35,6 @@
     $output5 = $nas;
     }
     ?>
-    
     <div class="titre">
         <h1>Découvrez le monde<br> des Cryptomonnaies <?php echo $output1; echo $output4; ?>! </h1>
         <button class="button-9" role="button" href="login.php" onclick="self.location.href='login.php'">S'inscrire !</button>
@@ -43,19 +42,7 @@
         <p>Premier portefeuille virtuel de cryptomonnaies au monde!<p>
         <p style="color:white;"> Vous êtes <?php echo $output3, $output5; ?> !</p>
     </div>
-    
 </body>
 
-
-<div class="footer">
-  <ul>
-    <li><a href="https://twitter.com/julesforrest">Twitter</a></li>
-    <li><a href="https://codepen.io/julesforrest">Codepen</a></li>
-    <li><a href="mailto:julesforrest@gmail.com">Email</a></li>
-    <li><a href="https://dribbble.com/julesforrest">Dribbble</a></li>
-    <li><a href="https://github.com/ThomasMrchl">Github</a></li>
-    <li><a href="login.php">S'inscrire</a></li>
-  </ul>
-</div>
 
 </html>
