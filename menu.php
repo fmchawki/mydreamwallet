@@ -30,6 +30,7 @@
     $output = $ne;
     }
     ?>
+    <link rel="shortcut icon" href="#">
         <div class="topnav">
             <a class="partielogo" href="home.php"><img src="images/logo.png" alt="logo"></a>
             <a href="crypto.php">Crypto</a>

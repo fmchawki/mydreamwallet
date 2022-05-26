@@ -69,34 +69,73 @@ if (isset ($_SESSION['pseudo'])){
     $ni = $_SESSION['mailA'];
     $na = $_SESSION['natio'];
     $nid = $_SESSION['id'];
-} 
+    $v_wallet = $_SESSION['vwallet'];
+    $vcry = $_POST['values'];
+    $nomcrypto=$_POST['name'];
+    $qcryptonom = "q_".$nomcrypto;
+    $db_username = '254480';
+    $db_password = 'Thomas&PierreMDW*';
+    $db_name     = 'mydreamwallet_base';
+    $db_host     = 'mysql-mydreamwallet.alwaysdata.net';
+    $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
+        or die('could not connect to database');
+    if(mysqli_connect_errno()) {
+        echo ("Connexion échouée : \n".mysqli_connect_error());
+        exit();
+        }
+    $requete = "SELECT * FROM User WHERE id='$nid'";
+    $exec_requete = mysqli_query($db,$requete);
+    $count = mysqli_num_rows($exec_requete);
+    for ($j = 0; $j < $count; $j++) {
+        $ligne = mysqli_fetch_array($exec_requete);
+        $qcrypto = $ligne[$qcryptonom];
+    }
 
-if ($nu == null) {
-    header("Location:connect.php");
 
 } else {
+    header("Location:connect.php");
+} 
 
-    $v_wallet = $_SESSION['vwallet'];
-    echo $v_wallet;
-    $vcry = $_POST['values'];
-    echo $vcry;
-    $nomcrypto=$_POST['name'];
+
+if ($nu != null){
     if (($_POST['type'] == "buy") and ($v_wallet >= $vcry)){
         $v_wallet = $v_wallet-$vcry;
-        $qcrypto = "q_".$nomcrypto;
+        $qcrypto = $qcrypto +1;
         $db_username = '254480';
         $db_password = 'Thomas&PierreMDW*';
         $db_name     = 'mydreamwallet_base';
         $db_host     = 'mysql-mydreamwallet.alwaysdata.net';
         $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
             or die('could not connect to database');
-        $requete = "UPDATE User SET '".$qcrypto."' =+ 1 , vwallet='".$v_wallet."' WHERE id='".$nid."'";
+        if(mysqli_connect_errno()) {
+            echo ("Connexion échouée : \n".mysqli_connect_error());
+            exit();
+            }
+        $requete = "UPDATE User SET ".$qcryptonom." = ".$qcrypto.", vwallet = '$v_wallet' WHERE id='$nid'";
         $exec_requete = mysqli_query($db,$requete);
-        echo "salut les amis";
+        echo "achat effectuer";
+        header("Location:crypto.php");
+    } elseif (($_POST['type'] == "Sell") and ($qcrypto >=1)){
+        $v_wallet = $v_wallet+$vcry;
+        $qcrypto = $qcrypto -1;
+        $db_username = '254480';
+        $db_password = 'Thomas&PierreMDW*';
+        $db_name     = 'mydreamwallet_base';
+        $db_host     = 'mysql-mydreamwallet.alwaysdata.net';
+        $db = mysqli_connect($db_host, $db_username, $db_password,$db_name)
+            or die('could not connect to database');
+        if(mysqli_connect_errno()) {
+            echo ("Connexion échouée : \n".mysqli_connect_error());
+            exit();
+            }
+        $requete = "UPDATE User SET ".$qcryptonom." = ".$qcrypto.", vwallet = '$v_wallet' WHERE id='$nid'";
+        $exec_requete = mysqli_query($db,$requete);
+        echo "vente effectuer";
     } else {
-        echo "pas assez dargent ! dommage";
-    }
+        header("Location:crypto.php");
+    } 
 }
+
 
 ?>
 </body>
