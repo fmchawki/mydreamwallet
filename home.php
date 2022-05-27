@@ -41,10 +41,40 @@
         </div>
         <div class="titre">
             <h1>Découvrez le monde<br> des Cryptomonnaies <?php echo $output1; ?>! </h1>
-            <button class="button-9" role="button" href="login.php" onclick="self.location.href='login.php'">S'inscrire !</button>
+            <button class="button-9" role="button" href="crypto.php" onclick="self.location.href='login.php'">Se lancer !</button>
         </div>
     </div>
+    <div class="bloc4">
+    <div class="container">
+    <h1 style="color:white; text-align:center;">Une multidude de cryptomonnaies différentes</h1>
+    <table class="responsive-table">
+        <thead>
+        <tr>
+            <th scope="col">Crypto - MDW</th>
+            <th scope="col">BTC</th></th>
+            <th scope="col">ETH</th>
+            <th scope="col">DOT</th>
+            <th scope="col">AVA</th>
+            <th scope="col">BNB</th>
+            <th scope="col">SOL</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Une multitude de crypto</th>
+            <td data-title="Released" id="stock-price-btc">BTC</td>
+            <td data-title="Studio" id="stock-price-eth">ETH</td>
+            <td data-title="Worldwide Gross" data-type="currency" id="stock-price-dot">DOT</td>
+            <td data-title="Domestic Gross" data-type="currency" id="stock-price-ava">AVA</td>
+            <td data-title="International Gross" data-type="currency" id="stock-price-bnbbtc">BNB</td>
+            <td data-title="Budget" data-type="currency" id="stock-price-sol">SOL</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
     <div class="bordure"></div>
+    </div>
+
     <div class="bloc2">
         <div class="image2">
             <img src="https://blush.design/api/download?shareUri=4StWlbCQyVnfXpGA&c=Hair_0%7E878787-0.2%7E9b5120-0.3%7E0f0f0f_Skin_0%7Eecafa3-0.2%7Ef6cbc3-0.3%7Ef6cbc3&w=800&h=800&fm=png">
@@ -55,7 +85,17 @@
         </div>
     </div>
 
+    <div class="bloc3">
+        <div class="image1">
+            <img src="https://blush.design/api/download?shareUri=MU_J1DEJcOUPwunF&c=Hair_0%7E878787-0.4%7E878787_Skin_0%7Ec26e5e-0.4%7Eecafa3&w=800&h=800&fm=png">
+        </div>
+        <div class="titre">
+            <h1>Suit le cours des cryptos <br> en temps direct <?php echo $output1; ?>! </h1>
+        </div>
+    </div>
 
+<!-- linking javascript -->
+<script src="js/eth.js"></script>
 
 
 </body>

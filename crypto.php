@@ -236,8 +236,7 @@ $_SESSION['vwallet'] = $valeurwallet;
     <input id="cryptocurrencyvalues" type='hidden' name="values" value=None> 
     <input class="type" type='hidden' name="type" value=None>
     <input class="type" type='hidden' id="name" name="name" value=None>
-</form>
-    </tbody>
+    </form>
   </table>
 </div>
 

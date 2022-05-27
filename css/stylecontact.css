@@ -46,7 +46,7 @@ input[type=text], textarea {
   width: 100%; 
   padding: 12px;
   border: 1px solid #303245;
-  border-radius: 20px;
+  border-radius: 10px;
   box-sizing: border-box; 
   margin-top: 25px; 
   margin-bottom: 20px; 

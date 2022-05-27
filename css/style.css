@@ -1,7 +1,6 @@
 body{
     font-family: DejaVu Sans Mono, monospace;
     background-color: #15172b;
-    padding-top: 1%;
 }
 
 /* Add a black background color to the top navigation */
@@ -20,6 +19,10 @@ body{
   font-size: 17px;
   }
 
+  div.bordure {
+    border-bottom:1px solid white;
+    padding-top: 0.5%;
+    }
 
   
   /* Change the color of links on hover */

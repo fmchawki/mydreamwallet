@@ -41,6 +41,7 @@
             <a class="active" href="connect.php"><?php echo $output; ?></a>
             </div>
         </div>
+        <div class="bordure"></div>
 
 
 
