@@ -243,5 +243,9 @@ $_SESSION['vwallet'] = $valeurwallet;
 <!-- linking javascript -->
 <script src="js/eth.js"></script>
 
+
+
+
+
 </body>
 </html>

@@ -36,16 +36,14 @@
             <a href="crypto.php">Crypto</a>
             <a href="ranking.php">Ranking</a>
             <a href="contact.php">Contact us</a>
+            <a href="#cours">Aide</a>
             <div class="topnav-right">
-            <a href="#search">My Wallet</a>
+            <a href="#mywallet">My Wallet</a>
             <a class="active" href="connect.php"><?php echo $output; ?></a>
             </div>
         </div>
         <div class="bordure"></div>
 
-
-
-<!-- Site footer -->
 </body>
 
 </html>

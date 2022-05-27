@@ -61,7 +61,7 @@
         </thead>
         <tbody>
         <tr>
-            <th scope="row">Une multitude de crypto</th>
+            <th scope="row">Les plus populaires</th>
             <td data-title="Released" id="stock-price-btc">BTC</td>
             <td data-title="Studio" id="stock-price-eth">ETH</td>
             <td data-title="Worldwide Gross" data-type="currency" id="stock-price-dot">DOT</td>
@@ -72,7 +72,6 @@
         </tbody>
     </table>
     </div>
-    <div class="bordure"></div>
     </div>
 
     <div class="bloc2">
@@ -80,7 +79,7 @@
             <img src="https://blush.design/api/download?shareUri=4StWlbCQyVnfXpGA&c=Hair_0%7E878787-0.2%7E9b5120-0.3%7E0f0f0f_Skin_0%7Eecafa3-0.2%7Ef6cbc3-0.3%7Ef6cbc3&w=800&h=800&fm=png">
         </div>
         <div class="titre2">
-            <h1>Simuler vos prochains investissements en toute sécurité <?php echo $output1; ?>! </h1>
+            <h1>Votre sécurité<br>Notre priorité <?php echo $output1; ?>! </h1>
             <p>Penser à vérifier votre email : <?php echo $output2; ?></p>
         </div>
     </div>
@@ -90,7 +89,8 @@
             <img src="https://blush.design/api/download?shareUri=MU_J1DEJcOUPwunF&c=Hair_0%7E878787-0.4%7E878787_Skin_0%7Ec26e5e-0.4%7Eecafa3&w=800&h=800&fm=png">
         </div>
         <div class="titre">
-            <h1>Suit le cours des cryptos <br> en temps direct <?php echo $output1; ?>! </h1>
+            <h1>Tu as <?php echo $output5; ?>$,<br> Tu peux encore t'améliorer ! </h1>
+            <p>Des cours seront bientôt disponibles</p>
         </div>
     </div>
 
