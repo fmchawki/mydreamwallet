@@ -108,6 +108,15 @@
     </tbody>
   </table>
 </div>
+<div class="footer">
+<div class="bordure"></div>
+    <footer>
+        <p>Site crée par Marchal Thomas & Attenot Pierre,</p>
+        <p>Des questions ou suggestions ? Contacter nous</p><a href="contact.php" style="color:blue;">ici</a>
+        <p>En étroite colaboration avec le NSI Gang</p>
+        <p>Merci.</p>
+    </footer>
+</div>
 </body>
 
 </html>

@@ -244,3 +244,9 @@
     content: none;
  }
 }
+
+.footer{
+  padding-top:110%;
+  color:white;
+  text-align: center;
+}
