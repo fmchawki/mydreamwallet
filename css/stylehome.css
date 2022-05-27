@@ -7,5 +7,39 @@
 }
 
 .titre{
-  text-align: left;
+  padding-top:7%;
+  float:left;
+  width: 40%;
+  text-align: center;
+}
+
+.image1{
+  margin-right:10em;
+  float:right;
+}
+
+div.bordure {
+  border-bottom:1px solid #08d;
+  padding-top: 0.5%;
+  }
+
+
+.titre2{
+  padding-top:3%;
+  float:right;
+  width: 40%;
+  text-align: center;
+  color:white;
+  font-size: 30px;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.image2{
+  margin-left:10em;
+  float:left;
+}
+
+.bloc2{
+  padding-top:1%;
 }

@@ -113,9 +113,8 @@ if ($nu != null){
             }
         $requete = "UPDATE User SET ".$qcryptonom." = ".$qcrypto.", vwallet = '$v_wallet' WHERE id='$nid'";
         $exec_requete = mysqli_query($db,$requete);
-        echo "achat effectuer";
         header("Location:crypto.php");
-    } elseif (($_POST['type'] == "Sell") and ($qcrypto >=1)){
+    } elseif (($_POST['type'] == "sell") and ($qcrypto >=1)){
         $v_wallet = $v_wallet+$vcry;
         $qcrypto = $qcrypto -1;
         $db_username = '254480';
@@ -130,7 +129,7 @@ if ($nu != null){
             }
         $requete = "UPDATE User SET ".$qcryptonom." = ".$qcrypto.", vwallet = '$v_wallet' WHERE id='$nid'";
         $exec_requete = mysqli_query($db,$requete);
-        echo "vente effectuer";
+        header("Location:crypto.php");
     } else {
         header("Location:crypto.php");
     } 

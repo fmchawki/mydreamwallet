@@ -29,6 +29,12 @@ session_start();
     $requete = "INSERT Into User (User.pseudo,User.natio,User.pass,User.email,User.verif,User.vwallet,User.q_btc,User.q_eth,User.q_bnb,User.q_sol,User.q_link,User.q_dot,User.q_ada,User.q_xrp,User.q_avax,User.q_luna) VALUES ('".$nom."','".$natio."','".$pass."','".$adresse."','".$verif."',5000,0,0,0,0,0,0,0,0,0,0)";
     $exec_requete = mysqli_query($db,$requete);
 
+    $_SESSION['vwallet'] = 5000;
+    $_SESSION['mailA'] = $adresse;
+    $_SESSION['pseudo'] = $nom;
+    $_SESSION['natio'] = $natio;
+    $_SESSION['id'] = $num_rows +1;  
+
     /* *
     function validateEmail($adresse) {
     if(filter_var($adresse, FILTER_VALIDATE_EMAIL)) {

@@ -30,13 +30,11 @@ body{
   /* Add a color to the active/current link */
   .topnav a.active {
   color: white;
-  background-color: #08d;
   border-radius: 30px;
   }
   
   .topnav a.partielogo {
      height: 1em;
-     background-color: #08d;
      border-radius: 30px;
   }
   

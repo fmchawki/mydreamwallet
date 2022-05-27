@@ -34,6 +34,7 @@
         <div class="cut cut-short"></div>
         <label for="origin" class="placeholder">Nationalité</label>
       </div>
+      <p style="text-align:center; color:white;">Utiliser le code ISO 3166</p>
       <input type="submit" name="submit" value="Submit" class="submit"/>
     </div>
 </form>

@@ -35,13 +35,29 @@
     $output5 = $nas;
     }
     ?>
-    <div class="titre">
-        <h1>Découvrez le monde<br> des Cryptomonnaies <?php echo $output1; echo $output4; ?>! </h1>
-        <button class="button-9" role="button" href="login.php" onclick="self.location.href='login.php'">S'inscrire !</button>
-        <p>Vérifier votre email : <?php echo $output2; ?></p>
-        <p>Premier portefeuille virtuel de cryptomonnaies au monde!<p>
-        <p style="color:white;"> Vous êtes <?php echo $output3, $output5; ?> !</p>
+    <div class="bloc1">
+        <div class="image1">
+            <img src="https://blush.design/api/download?shareUri=mQphEtmveiwYfoNy&c=Hair_0%7E0f0f0f-0.6%7E0f0f0f_Skin_0%7Ef6cbc3-0.6%7Ef6cbc3&w=800&h=800&fm=png">
+        </div>
+        <div class="titre">
+            <h1>Découvrez le monde<br> des Cryptomonnaies <?php echo $output1; ?>! </h1>
+            <button class="button-9" role="button" href="login.php" onclick="self.location.href='login.php'">S'inscrire !</button>
+        </div>
     </div>
+    <div class="bordure"></div>
+    <div class="bloc2">
+        <div class="image2">
+            <img src="https://blush.design/api/download?shareUri=4StWlbCQyVnfXpGA&c=Hair_0%7E878787-0.2%7E9b5120-0.3%7E0f0f0f_Skin_0%7Eecafa3-0.2%7Ef6cbc3-0.3%7Ef6cbc3&w=800&h=800&fm=png">
+        </div>
+        <div class="titre2">
+            <h1>Simuler vos prochains investissements en toute sécurité <?php echo $output1; ?>! </h1>
+            <p>Penser à vérifier votre email : <?php echo $output2; ?></p>
+        </div>
+    </div>
+
+
+
+
 </body>
 
 
