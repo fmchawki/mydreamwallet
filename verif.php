@@ -22,14 +22,15 @@ session_start();
      $natio = $_POST['origin'];
      $verif=0;
      
+    $valleurwallet = 5000;
     $result = mysqli_query($db,"SELECT * FROM User");
     $num_rows = mysqli_num_rows($result);
     $yep = 10;
     echo $num_rows;
-    $requete = "INSERT Into User (User.pseudo,User.natio,User.pass,User.email,User.verif,User.vwallet,User.q_btc,User.q_eth,User.q_bnb,User.q_sol,User.q_link,User.q_dot,User.q_ada,User.q_xrp,User.q_avax,User.q_luna) VALUES ('".$nom."','".$natio."','".$pass."','".$adresse."','".$verif."',5000,0,0,0,0,0,0,0,0,0,0)";
+    $requete = "INSERT Into User (User.pseudo,User.natio,User.pass,User.email,User.verif,User.vwallet,User.q_btc,User.q_eth,User.q_bnb,User.q_sol,User.q_link,User.q_dot,User.q_ada,User.q_xrp,User.q_avax,User.q_luna) VALUES ('".$nom."','".$natio."','".$pass."','".$adresse."','".$verif."','".$valleurwallet."',0,0,0,0,0,0,0,0,0,0)";
     $exec_requete = mysqli_query($db,$requete);
 
-    $_SESSION['vwallet'] = 5000;
+    $_SESSION['vwallet'] = $valleurwallet;
     $_SESSION['mailA'] = $adresse;
     $_SESSION['pseudo'] = $nom;
     $_SESSION['natio'] = $natio;

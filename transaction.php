@@ -131,7 +131,7 @@ if ($nu != null){
         $exec_requete = mysqli_query($db,$requete);
         header("Location:crypto.php");
     } else {
-        header("Location:crypto.php");
+        header("Location:home.php");
     } 
 }
 
