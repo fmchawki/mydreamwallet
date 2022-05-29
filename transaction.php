@@ -69,6 +69,7 @@ if (isset ($_SESSION['pseudo'])){
     $ni = $_SESSION['mailA'];
     $na = $_SESSION['natio'];
     $nid = $_SESSION['id'];
+    echo $nid;
     $v_wallet = $_SESSION['vwallet'];
     $vcry = $_POST['values'];
     $nomcrypto=$_POST['name'];

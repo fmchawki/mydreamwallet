@@ -15,7 +15,6 @@ session_start();
         la valeur des attributs name comme clé 
        */
      $nom = $_POST['firstname']; 
-     $_SESSION['pseudo'] = $nom;
      $pass = hash('sha256', $_POST['passw2']); 
      
      $adresse = $_POST['email2'];
@@ -23,18 +22,20 @@ session_start();
      $verif=0;
      
     $valleurwallet = 5000;
-    $result = mysqli_query($db,"SELECT * FROM User");
-    $num_rows = mysqli_num_rows($result);
-    $yep = 10;
-    echo $num_rows;
-    $requete = "INSERT Into User (User.pseudo,User.natio,User.pass,User.email,User.verif,User.vwallet,User.q_btc,User.q_eth,User.q_bnb,User.q_sol,User.q_link,User.q_dot,User.q_ada,User.q_xrp,User.q_avax,User.q_luna) VALUES ('".$nom."','".$natio."','".$pass."','".$adresse."','".$verif."','".$valleurwallet."',0,0,0,0,0,0,0,0,0,0)";
+    $requete="SELECT MAX(id) FROM User";
     $exec_requete = mysqli_query($db,$requete);
-
+    $count = mysqli_num_rows($exec_requete);
+    for ($j = 0; $j < $count; $j++) {
+      $ligne = mysqli_fetch_array($exec_requete);
+      $idfinal = $ligne['MAX(id)'];
+    }
     $_SESSION['vwallet'] = $valleurwallet;
     $_SESSION['mailA'] = $adresse;
     $_SESSION['pseudo'] = $nom;
     $_SESSION['natio'] = $natio;
-    $_SESSION['id'] = $num_rows +1;  
+    $_SESSION['id'] = $idfinal +1; 
+    $requete = "INSERT Into User (User.pseudo,User.natio,User.pass,User.email,User.verif,User.vwallet,User.q_btc,User.q_eth,User.q_bnb,User.q_sol,User.q_link,User.q_dot,User.q_ada,User.q_xrp,User.q_avax,User.q_luna) VALUES ('".$nom."','".$natio."','".$pass."','".$adresse."','".$verif."','".$valleurwallet."',0,0,0,0,0,0,0,0,0,0)";
+    $exec_requete = mysqli_query($db,$requete); 
 
     /* *
     function validateEmail($adresse) {
