@@ -60,7 +60,7 @@ $valeur  = "new_utilisateur";
 $valeur2 = "mail";
 $valeur3 = "nationalité";
 $valeur4 = "id";
-$valeurwallet = 0;
+$valeurwallet = 5000;
 $qbtc = 0;
 $qeth = 0;
 $qbnb = 0;
@@ -78,6 +78,7 @@ if (isset ($_SESSION['pseudo'])){
     $nmail = $_SESSION['mailA'];
     $nnatio = $_SESSION['natio'];
     $nid = $_SESSION['id'];
+    $valeurwallet = $_SESSION['vwallet'];
 }
 
 if ($nu == null) {
@@ -114,7 +115,6 @@ for ($j = 0; $j < $count; $j++) {
   $qavax = $ligne["q_avax"];
   $qluna = $ligne["q_luna"];
 }
-$_SESSION['vwallet'] = $valeurwallet; 
 }
 
 ?>
@@ -202,8 +202,8 @@ $_SESSION['vwallet'] = $valeurwallet;
         <td data-title="Studio">//</td>
         <td data-title="Worldwide Gross" data-type="currency"><?php echo $qada; ?></td>
         <td data-title="Domestic Gross" data-type="currency" id="stock-price-wbt" style="font-weight: bold;">ADA</td>
-        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="ada" value="Buy" onclick="sendFormulaire('stock-price-ada', 'buy','ada')"></div></td>
-        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="ada" value="Sell" onclick="sendFormulaire('stock-price-ada', 'sell','ada')"></div></td>
+        <td data-title="International Gross" data-type="currency"><div class="button-green"><input type="button" name="ada" value="Buy" onclick="sendFormulaire('stock-price-wbt', 'buy','ada')"></div></td>
+        <td data-title="Budget" data-type="currency"><div class="button-red"><input type="button" name="ada" value="Sell" onclick="sendFormulaire('stock-price-wbt', 'sell','ada')"></div></td>
       </tr>
       <tr>
         <th scope="row">XRP</th>
