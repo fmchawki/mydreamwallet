@@ -11,7 +11,7 @@
     $valeur2 = "mail";
     $valeur3 = "nationalité";
     $valeur4 = "votre id";
-    $valeur5 = 0;
+    $valeur5 = 5000;
     $nu="";
     if (isset ($_SESSION['pseudo'])){
         $nu = $_SESSION['pseudo'];
@@ -39,12 +39,11 @@
         <div class="image1">
             <img src="https://blush.design/api/download?shareUri=mQphEtmveiwYfoNy&c=Hair_0%7E0f0f0f-0.6%7E0f0f0f_Skin_0%7Ef6cbc3-0.6%7Ef6cbc3&w=800&h=800&fm=png">
         </div>
-        <div class="titre">
+        <div class="titre1">
             <h1>Découvrez le monde<br> des Cryptomonnaies <?php echo $output1; ?>! </h1>
-            <button class="button-9" role="button" href="crypto.php" onclick="self.location.href='login.php'">Se lancer !</button>
+            <button class="button-9" role="button" href="crypto.php" onclick="self.location.href='crypto.php'">Se lancer !</button>
         </div>
     </div>
-    <div class="bloc4">
     <div class="container">
     <h1 style="color:white; text-align:center;">Une multidude de cryptomonnaies différentes</h1>
     <table class="responsive-table">
@@ -72,42 +71,34 @@
         </tbody>
     </table>
     </div>
-    </div>
 
     <div class="bloc2">
         <div class="image2">
             <img src="https://blush.design/api/download?shareUri=4StWlbCQyVnfXpGA&c=Hair_0%7E878787-0.2%7E9b5120-0.3%7E0f0f0f_Skin_0%7Eecafa3-0.2%7Ef6cbc3-0.3%7Ef6cbc3&w=800&h=800&fm=png">
         </div>
         <div class="titre2">
-            <h1>Votre sécurité<br>Notre priorité <?php echo $output1; ?>! </h1>
+            <h1>Votre sécurité,<br>Notre priorité <?php echo $output1; ?>! </h1>
             <p>Penser à vérifier votre email : <?php echo $output2; ?></p>
         </div>
     </div>
 
     <div class="bloc3">
-        <div class="image1">
+        <div class="image3">
             <img src="https://blush.design/api/download?shareUri=MU_J1DEJcOUPwunF&c=Hair_0%7E878787-0.4%7E878787_Skin_0%7Ec26e5e-0.4%7Eecafa3&w=800&h=800&fm=png">
         </div>
-        <div class="titre">
+        <div class="titre3">
             <h1>Tu as <?php echo $output5; ?>$,<br> Tu peux encore t'améliorer ! </h1>
             <p>Des cours seront bientôt disponibles</p>
         </div>
     </div>
 
+
 <!-- linking javascript -->
 <script src="js/eth.js"></script>
 
-<div class="footer">
-<div class="bordure"></div>
-    <footer>
-        <p>Site crée par Marchal Thomas & Attenot Pierre,</p>
-        <p>Des questions ou suggestions ? Contacter nous</p><a href="contact.php" style="color:blue;">ici</a>
-        <p>En étroite colaboration avec le NSI Gang</p>
-        <p>Merci.</p>
-    </footer>
-</div>
-
 </body>
+
+<?php include("footer.php"); ?>
 
 
 </html>

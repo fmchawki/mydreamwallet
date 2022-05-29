@@ -68,4 +68,5 @@ header("location:home.php"):
 mysqli_close($db); // fermer la connexion
 
 echo $nom;
+header("location:home.php")
 ?>

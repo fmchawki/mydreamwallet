@@ -1,3 +1,8 @@
+img{
+  max-width: 100%;
+  height:auto;
+}
+
 .signup {
   width: 15em;
   height: 8em;
@@ -6,55 +11,86 @@
   border-radius: 2em;
 }
 
-.titre{
-  padding-top:7%;
-  float:left;
-  max-width: 33%;
+.titre1{
+  padding-top:10%;
+  max-width: 40%;
   text-align: left;
-  padding-left: 8%;
+  margin-left: 10%;
+  color:white;
+  padding-bottom: 20%;
 }
 
 .image1{
-  margin-right:10em;
+  margin-right:10%;
   float:right;
+  max-width: 40%;
+  height: auto;
 }
 
+.image3{
+  margin-right:10%;
+  float:right;
+  max-width: 40%;
+  height: auto;
+}
 
 .titre2{
-  padding-top:6%;
-  float:right;
-  max-width: 33%;
-  padding-right:8%;
+  padding-top:10%;
+  max-width: 40%;
+  float: right;
   text-align: right;
+  margin-right: 10%;
+  padding-bottom: 20%;
   color:white;
-  font-size: 30px;
-  margin-left: 2em;
-  margin-right: 2em;
+}
+
+.titre3{
+  padding-top:15%;
+  max-width: 40%;
+  text-align: left;
+  margin-left: 10%;
+  color:white;
+  padding-bottom: 20%;
 }
 
 .image2{
-  margin-left:10em;
+  margin-left: 10%;
   float:left;
+  max-width: 40%;
+  height: 100%;
+  width: 100%;
 }
 
 .bloc1{
-  padding-top:1%;
+  margin-top:1%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: auto;
+  width: 90%;
+  position:absolute;
 }
 
 .bloc2{
-  padding-top:1%;
+  margin-top:1%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: auto;
+  width: 90%;
+  position:absolute;
 }
 
 .bloc3{
-  padding-top:1%;
+  padding-top:40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: auto;
+  width: 90%;
+  position:absolute;
 }
 
 .bloc4{
   padding-top:1%;
 }
-
-
-
 
 .container {
   margin: 5% 3%;
