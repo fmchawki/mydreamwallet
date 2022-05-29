@@ -14,13 +14,13 @@ if(isset($_POST['mailA']) && isset($_POST['passw']))
     // pour éliminer toute attaque de type injection SQL et XSS
     $email = mysqli_real_escape_string($db,htmlspecialchars($_POST['mailA'])); 
     $password = mysqli_real_escape_string($db,htmlspecialchars(hash('sha256',$_POST['passw'])));
-    
+    echo $password;
     if($email !== ""&& $password !== "")
     {
         $requete = "SELECT * FROM User where 
-              email = '".$email."'";
+              email = '$email' AND pass='$password'";
         $exec_requete = mysqli_query($db,$requete);
-        $reponse      = mysqli_fetch_array($exec_requete);
+        $reponse = mysqli_fetch_array($exec_requete);
         $count = mysqli_num_rows($exec_requete);
         for ($j = 0; $j < $count; $j++) {
          $pseudo = $reponse["pseudo"];
@@ -56,5 +56,7 @@ else
 {
    header('Location: connect.php');
 }
+
+  
 mysqli_close($db); // fermer la connexion
 ?>
