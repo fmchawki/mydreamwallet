@@ -29,8 +29,14 @@
 
 				<div>
 					<i class="fa fa-map-marker"></i>
-					<p><span>Dans le trou du cul du monde</span> Vosges, France</p>
+					<p><span>Dans la plus belle ville du monde</span> Paris, France</p>
 				</div>
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>Nous contacter directement :</p>
+				</div>
+
 
 				<div>
 					<i class="fa fa-phone"></i>
@@ -49,7 +55,7 @@
 				<p class="footer-company-about">
 					<span>About the company</span>
 					L'idée de ce site internet était de proposé à un utilisateur de pouvoir similuer ses prochains investissements en cryptomonnaies sans véritablement prendre de risque, car l'argent sur ce site est uniquement fictif.
-                    <br>Crée par Marchal Thomas & Attenot Pierre<br>Membres du NSI Gang
+                    <br>Crée par Marchal Thomas<br> Etudiant à l'Efrei Paris
 				</p>
 
 				<div class="footer-icons">
