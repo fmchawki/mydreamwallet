@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php include("menu.php"); ?>
+    <h1>test</h1>
     <div class="descendre">
         <form action="verification.php" method="post">
         <div class="form">
